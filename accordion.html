@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+</html>
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ITB LTD</title>
+
+    <style>
+        body {
+            margin: 0;
+            overscroll-behavior-y: none;
+        }
+
+        h1, h2, h3, h4, h5, p, li {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1, h2, h3, h4, h5 {
+            color: #444;
+        }
+
+        h4, h5 {
+            color: #555;
+        }
+
+        p, li {
+            color: #666;
+            font-size: 1.0vmax;
+        }
+
+        h1 {font-size: 1.9vmax;}
+        h3 {font-size: 1.1vmax;}
+        h4 {font-size: 1.0vmax;}
+
+        /* div.title  {
+            text-align: left;
+            background-color: rgb(230, 245, 245);
+            top: 0;
+            height: 15%;
+            padding-left: 2%;
+            padding-right: 2%;
+            padding-top: 1%;
+            padding-bottom: 1%;
+
+        } */
+
+        div.main {
+            text-align: left;
+            /* background-color: beige; */
+            top: 28%;
+            height: 100%;
+            /* padding-left: 2%;
+            padding-right: 2%; */
+            padding-top: 1%;
+            padding-bottom: 1%;
+
+        }
+
+        div.double-section {
+            display: inline-block;
+            text-align: left;
+        }
+
+        div.double-section h1,  div.double-section h2,  div.double-section h3,  div.double-section h4,  div.double-section h5,  div.double-section p,  div.double-section li, div.double-section img {
+            width: 60%;
+            margin-left: 20%;
+            margin-right: 20%;
+
+        }
+
+        div.triple-section {
+            display: inline-block;
+            text-align: left;
+        }
+
+        div.triple-section > * {
+            float: left;
+            width: 33.3vmax;
+        }
+
+        div.double-section > * {
+            float: left;
+            width: 50%;
+        }
+        
+        ul {
+            padding-inline-start: 15px;
+        }
+
+        div.about p, div.services li {
+            font-size: 0.7vmax;
+        }
+
+        div.services h4 {
+            font-size: 0.8vmax;
+        }
+
+        div.projects tr {
+            width: 100%;
+            height: 60%;
+        }
+
+        td.projects {
+            width: 30%;
+            padding: 2%;
+            text-align: center;
+            background-color: rgb(180, 225, 235);
+            border: solid 0.1vmax rgb(68, 68, 68);
+            border-radius: 0.5vmax;
+        }
+
+        div.projects table {
+            width: 80%;
+            height: 48%;
+            border-spacing: 10px;
+
+        }
+
+        div.table4 img, div.table2 img  {
+            width: 100%;
+        }
+
+        div.table4 td {
+            width: 25%;
+        }
+
+        div.table4 td p {
+            font-size: 0.5vmax;
+        }
+
+        div.table2 td p {
+            font-size: 1.0vw;
+        }
+
+        div.table4 table {
+            width: 80%;
+            border-spacing: 1.0vw;
+        }
+
+        div.table2 td {
+            width: 50%;
+        }
+
+        div.table2 table {
+            width: 80%;
+            border-spacing: 2.5vmax;
+        }
+
+        div.double-section, div.single-section {
+            padding-left: 2%;
+            padding-right: 2%;
+            width: 96%;
+            /* padding-top: 1%;
+            padding-bottom: 1%; */
+        }
+
+        .clear {
+            background-color: transparent;
+        }
+
+        .green {
+            background-color: beige;
+        }
+
+        .blue {
+            background-color: rgb(230, 245, 245);
+        }
+
+        .accordion {
+            transition: 1s;
+        }
+
+        .panel {
+            padding: 0 18px;
+            /* background-color: white; */
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+
+        #contact {
+            width: fit-content;
+            padding: 1%;
+        }
+
+        #contact p {
+            text-align: left;
+            float: left;
+            margin-right: 3vmax;
+            margin-left: 3vmax;
+        }
+
+        @media screen and (orientation:portrait) {
+            #contact p {
+                float: none;
+            }
+        }
+
+        /* #menu {
+            width: 80%;
+            transition: 0.4s;
+        } */
+
+        #acc-btn {
+            cursor: pointer;
+            float:right;
+            transform: rotate(0deg);
+            transition: 0.4s;
+            border: none;
+            background-color: transparent;
+            /* font-size: 1.3vmax; */
+        }
+
+        #acc-btn.acc-btn-active {
+            transform: rotate(540deg);
+        }
+
+        #acc-btn h1 {
+            margin: 0;
+            font-size: 1.0vmax;
+        }
+
+        div#contact p {
+            color: rgb(68, 68, 68);
+        }
+
+    </style>
+</head>
+
+<body class="blue">
+    <!-- title -->
+    <div class="title" align="center">
+        <div class="double-section clear" align="center">
+            <div>
+                <h1>ITB LTD</h1>
+                <h3>ENGINEERING CONSULTING & MANAGEMENT</h3>
+            </div>
+            <div style="text-align: right">
+                <h1>י.ת.ב בע״מ</h1>
+                <h3>ניהול, יעוץ, פיקוח ובקרה על פרויקטים</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- main body -->
+    <div class="main clear" align="center">
+        <!-- about and services section -->
+        <div class="double-section clear" align="center">
+            <div class="about">
+                <h1>ABOUT US</h1>
+                <p>
+                    I.T.B. Ltd was founded in 1971. The
+                    company deals in management
+                    consultation supervision and monitoring
+                    of projects in legal, engineering, industrial,
+                    and financial fields.
+                    <br><br>
+                    The company meets the highest quality
+                    standards and has the standard of
+                    approval from ISO 9002. The company has
+                    two branches in Israel and the main office
+                    is located in the Industrial Zone of Lev
+                    HaSharon.
+                    <br><br>
+                    The company employs 90 professionals in
+                    various fields such as engineering, finance,
+                    architecture, and law.
+                </p>
+            </div>
+
+            <div class="services">
+                <h1>Our Services</h1>
+                <h4>The engineering branch of the company deals in various fields which are:</h4>
+                <ul>
+                    <li>Consultation, coordination, monitoring and supervision of building.</li>
+                    <li>Infrastructure work & projects all over the country.</li>
+                    <li>Management, planning and setting up of complex infrastructure systems.</li>
+                    <li>Management, establishment and supervision of transportational projects.</li>
+                    <li>Management, establishment and supervision of national projects (The Urban train in the Tel Aviv area, Ayalon highway, the desalination installation in Ashkelon & others).</li>
+                    <li>Management and supervision of new villages, public buildings, hostels, apartments & places of business that are being established.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- projects section -->
+        <div class="single-section clear" align="center" style="padding-top: 2%;">
+            <div class="projects">
+                <h1>Selected Projects</h1>
+                <h4>in the various departments of the company:</h4>
+                <table id="menu">
+                    <tr>
+                        <td class="projects accordion">
+                            <h3>
+                                Roads & Intersections<button id="acc-btn"><h1>▼</h1></button>
+                            </h3>
+                            <div class="single-section clear panel" align="center">
+                                <div class="table2">
+                                    <!-- road picture and description table -->
+                                    <table>
+                                        <tr>
+                                            <td><img src="images/roads/slice1.png" alt=""></td>
+                                            <td><p>
+                                                NETIVEI ISRAEL NATIONAL TRANSPORT INFRASTRUCTURE COMPANY LTD<br><br>
+                                                Project: Road 444<br><br>
+                                                Length 35.7 km<br><br>
+                                                Budget: a few hundred million NIS<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/roads/slice2.png" alt=""></td>
+                                            <td><p>
+                                                NETIVEI ISRAEL NATIONAL TRANSPORT INFRASTRUCTURE COMPANY LTD<br><br>
+                                                Project: Road 16<br><br>
+                                                The road will be another main entrance
+                                                to the capital and will include 2 tunnels.<br><br>
+                                                Budget: 1.5 B NIS<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/roads/slice3.png" alt=""></td>
+                                            <td><p>
+                                                NETIVEI ISRAEL NATIONAL TRANSPORT INFRASTRUCTURE COMPANY LTD<br><br>
+                                                Project: Road 4 Ashdod North<br><br>
+                                                Construction of a new interchange and widening of the road to three lanes<br><br>
+                                                Budget: NIS 370 million<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/roads/slice4.png" alt=""></td>
+                                            <td><p>
+                                                NETIVEI ISRAEL NATIONAL TRANSPORT INFRASTRUCTURE COMPANY LTD<br><br>
+                                                Project: Road 38 Beit Shemesh<br><br>
+                                                Widening of Road 38 to a two-lane road,
+                                                including level separations in the section
+                                                from Sha'ar HaGai to Beit Shemesh<br><br>
+                                                Budget: NIS 124 million<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/roads/slice5.png" alt=""></td>
+                                            <td><p>
+                                                NETIVEI ISRAEL NATIONAL TRANSPORT INFRASTRUCTURE COMPANY LTD<br><br>
+                                                Project: Road 4 Public transport route Pardesiya Hadarim<br><br>
+                                                Budget: NIS 126 million<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/roads/slice6.png" alt=""></td>
+                                            <td><p>
+                                                NETIVEI ISRAEL NATIONAL TRANSPORT INFRASTRUCTURE COMPANY LTD<br><br>
+                                                Project: Road 232 Kerem Shalom Nir Itzhak<br><br>
+                                                Upgrade to a two-lane road<br><br>
+                                                Budget: NIS 84 million<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/roads/slice7.png" alt=""></td>
+                                            <td><p>
+                                                NETIVEI ISRAEL NATIONAL TRANSPORT INFRASTRUCTURE COMPANY LTD<br><br>
+                                                Project: Road 60 Al Arub<br><br>
+                                                Length 7.5 km<br><br>
+                                                A new road bypasses the Al-Arub refugee<br><br>
+                                                Budget: NIS 200 million<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/roads/slice8.png" alt=""></td>
+                                            <td><p>
+                                                NETIVEI ISRAEL NATIONAL TRANSPORT INFRASTRUCTURE COMPANY LTD<br><br>
+                                                Project: Road 35<br><br>
+                                                Width road in the southern region,<br><br>
+                                                Length 58 km<br><br>
+                                                Budget: NIS 350 million<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/roads/slice9.png" alt=""></td>
+                                            <td><p>
+                                                AYALON HIGHWAYS<br><br>
+                                                Project: Road 200 Including separation over a railway track<br><br>
+                                                Budget: NIS 84 million<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/roads/slice10.png" alt=""></td>
+                                            <td><p>
+                                                AYALON HIGHWAYS<br><br>
+                                                Project: Level separation 141 Rehovot<br><br>
+                                                Budget: NIS 81million<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/roads/slice11.png" alt=""></td>
+                                            <td><p>
+                                                YEFE NOF Transportation	infrastructure and construction LTD<br><br>
+                                                Project: Nahal Giborim Bridge<br><br>
+                                                Budget: NIS 132 million<br><br>
+                                                I.T.B Role: Monitoring & Control <br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/roads/slice12.png" alt=""></td>
+                                            <td><p>
+                                                YEFE NOF Transportation	infrastructure and construction LTD<br><br>
+                                                Project: Connection of Road 22 to the Carmel Tunnels<br><br>
+                                                Budget: NIS 181million<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="projects accordion">
+                            <h3>Railways & Railway Infrastructure<button id="acc-btn"><h1>▼</h1></button></h3>
+                            <!-- railway and infrastructure section -->
+                            <div class="single-section clear panel" align="center">
+                                <div class="table2">
+                                    <!-- picture and description table -->
+                                    <table>
+                                        <tr>
+                                            <td><img src="images/railways/slice1.png" alt=""></td>
+                                            <td><p>
+                                                NETIVEI ISRAEL NATIONAL TRANSPORT INFRASTRUCTURE COMPANY LTD<br><br>
+                                                Project: Ayalon Fourth rail<br><br>
+                                                The railroad stretches along the Ayalon
+                                                river and the Ayalon canal, Length 5 km.<br><br>
+                                                Budget: 5.5B NIS<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/railways/slice2.png" alt=""></td>
+                                            <td><p>
+                                                NETIVEI ISRAEL NATIONAL TRANSPORT INFRASTRUCTURE COMPANY LTD<br><br>
+                                                Project: Eastern railway section B<br><br>
+                                                The eastern railway stretches for about 65
+                                                km in the eastern coastal plain.<br><br>
+                                                Budget: 4B NIS<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/railways/slice3.png" alt=""></td>
+                                            <td><p>
+                                                ISRAEL RAILWAYS<br><br>
+                                                Project: Rail 431(Shfela)<br><br>
+                                                A railroad that will connect the Shfela to the center<br><br>
+                                                Budget: 3.2B NIS<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/railways/slice4.png" alt=""></td>
+                                            <td><p>
+                                                ISRAEL RAILWAYS<br><br>
+                                                Project: Extension of docks at 48 railway station<br><br>
+                                                Budget: 2.2B NIS<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/railways/slice5.png" alt=""></td>
+                                            <td><p>
+                                                ISRAEL RAILWAYS<br><br>
+                                                Project: The northern Logistic center - Kishon<br><br>
+                                                Budget: 1.5B NIS<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/railways/slice6.png" alt=""></td>
+                                            <td><p>
+                                                ISRAEL RAILWAYS<br><br>
+                                                Project: The southern Logistic center - Beer Sheva<br><br>
+                                                Budget: 500 million NIS<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/railways/slice7.png" alt=""></td>
+                                            <td><p>
+                                                ISRAEL RAILWAYS<br><br>
+                                                Project: Railway center complex - Lod<br><br>
+                                                The complex is located on an area of 51 dunams and includes a new train station in the city Lod, alongside commercial and entertainment areas.<br><br>
+                                                Budget: 380 million NIS<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/railways/slice8.png" alt=""></td>
+                                            <td><p>
+                                                ISRAEL RAILWAYS<br><br>
+                                                Project: Railway Keshet -Modiin<br><br>
+                                                The railway connecting the city of Modiin to the highway to the capital Jerusalem.<br><br>
+                                                Budget: NIS 330 million<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/railways/slice9.png" alt=""></td>
+                                            <td><p>
+                                                NETIVEI ISRAEL NATIONAL TRANSPORT INFRASTRUCTURE COMPANY LTD<br><br>
+                                                Project: Train Station Kefar Yehoshua<br><br>
+                                                Budget: NIS 53 million<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/railways/slice10.png" alt=""></td>
+                                            <td><p>
+                                                NETIVEI ISRAEL NATIONAL TRANSPORT INFRASTRUCTURE COMPANY LTD<br><br>
+                                                Project: Train Station Beit Shean<br><br>
+                                                Budget: NIS 64 million<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                         <td class="projects accordion">
+                            <h3>Light Rails<button id="acc-btn"><h1>▼</h1></button></h3>
+                            <!-- light rails section -->
+                            <div class="single-section clear panel" align="center">
+                                <div class="table2">
+                                    <!-- picture and description table -->
+                                    <table>
+                                        <tr>
+                                            <td><img src="images/light railways/slice1.png" alt=""></td>
+                                            <td><p>
+                                                NTA Metropolitan mass transit system ltd<br><br>
+                                                Project: Purple Line<br><br>
+                                                Budget: 8.5 B NIS<br><br>
+                                                The Purple Line is designed to connect the eastern regions of the Tel Aviv metropolitan area with the Tel Aviv city center. The total length of the line is approximately 28 km.<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/light railways/slice2.png" alt=""></td>
+                                            <td><p>
+                                                The Jerusalem Transport Master Plan Team<br><br>
+                                                Project: Light rail in Jerusalem - RFT (section A)<br><br>
+                                                Budget: NIS 180 million<br><br>
+                                                The Jerusalem Transportation Master Plan Team is working to improve transportation in the Jerusalem metropolitan area, to encourage the city’s residents and visitors to use public transportation, and to improve the quality of life for metropolitan residents.<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="projects accordion">
+                        <h3>International Projects<button id="acc-btn"><h1>▼</h1></button></h3>
+                         <!-- International projects section -->
+                        <div class="single-section clear panel" align="center">
+                            <div class="table2">
+                                <!-- picture and description table -->
+                                <table>
+                                    <tr>
+                                        <td><img src="images/international/slice1.png" alt=""></td>
+                                        <td><p>
+                                            The Israel Airports Authority<br><br>
+                                            Project: ILAN & ASAF RAMON AIRPORT - EILAT<br><br>
+                                            Budget: 1.6 B NIS<br><br>
+                                            Ilan and Assaf Ramon Airport is the new	airport
+                                            of the city of Eilat replacing the airports of Eilat
+                                            and Ovda. Ramon Airport Eilat is located about
+                                            19 km north of the city of Eilat and is actually the
+                                            southern air gate of the State of Israel. The
+                                            airport serves domestic and international
+                                            tourism to the city of Eilat and to the southern
+                                            resorts of the country, the Arava, Mitzpe Ramon,
+                                            and the Dead Sea.
+                                            The Ilan and Assaf Ramon Airport is a unique
+                                            national project due to being the first
+                                            international and domestic airport that was
+                                            designed and built from the ground up by the
+                                            Israel Airports Authority and is a testament to
+                                            the Authority's expertise in the field of aviation.
+                                            The airport has a 3,600-square-meter runway,
+                                            which allows activity for most types of aircraft to
+                                            any destination.<br><br>
+                                            I.T.B Role: Monitoring & Control<br><br>
+                                        </p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/international/slice2.png" alt=""></td>
+                                        <td><p>
+                                            The Ministry Of National Infrastructures<br><br>
+                                            Project: Desalination plant in Ashkelon<br><br>
+                                            Desalination plant using reverse osmosis
+                                            which provides quality drinking water to
+                                            the national water system in Israel.
+                                            Budget: 1.5 B NIS<br><br>
+                                            I.T.B Role: Monitoring & Control<br><br>
+                                        </p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/international/slice3.png" alt=""></td>
+                                        <td><p>
+                                            The Water Commission<br><br>
+                                            Project: Desalination plant in Sorek<br><br>
+                                            Desalination plant using reverse osmosis
+                                            which provides quality drinking water to
+                                            the national water system in Israel.
+                                            Budget: NIS 230 million<br><br>
+                                            I.T.B Role: Monitoring & Control<br><br>
+                                        </p></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="projects accordion">
+                            <h3>Power Stations<button id="acc-btn"><h1>▼</h1></button></h3>
+                            <!-- Power Stations section -->
+                            <div class="single-section clear panel" align="center">
+                                <div class="table2">
+                                    <!-- picture and description table -->
+                                    <table>
+                                        <tr>
+                                            <td><img src="images/power/slice1.png" alt=""></td>
+                                            <td><p>
+                                                The Ministry of Water & Energy<br><br>
+                                                Project: Dorad Power Plant<br><br>
+                                                Budget: NIS 265 million<br><br>
+                                                A private power plant for the production of electricity, which operates with integrated	recycling technology.
+                                                The station	has	a maximum power of 860 MW and is powered by natural gas.<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/power/slice2.png" alt=""></td>
+                                            <td><p>
+                                                IEC Israel Electric<br><br>
+                                                Project: Power Plants<br><br>
+                                                Construction of power plants and
+                                                electrical installations included in the IEC-approved development plan.<br><br>
+                                                B udget: 1B NIS<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/power/slice3.png" alt=""></td>
+                                            <td><p>
+                                                Eco-Energy Golan ltd<br><br>
+                                                Project: BIOGAS PLANT<br><br>
+                                                Budget: 60 Million NIS<br><br>
+                                                Treatment of Municipal Waste for the Golan Region<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/power/slice4.png" alt=""></td>
+                                            <td><p>
+                                                Tambour Hefer & Co. Ecology<br><br>
+                                                Project: BIOGAS PLANT<br><br>
+                                                Budget: NIS 70 million<br><br>
+                                                Treatment of Municipal Waste for the Emek Hefer Region<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/power/slice5.png" alt=""></td>
+                                            <td><p>
+                                                Eco-Energy Beer Tuvia ltd<br><br>
+                                                Project: BIOGAS PLANT<br><br>
+                                                Budget: NIS 65 million<br><br>
+                                                Treatment of Municipal Waste for the Beer Tuvia Region<br><br>
+                                                I.T.B Role: Monitoring & Control <br><br>
+                                            </p></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="projects accordion">
+                            <h3>Extensive National Projects<button id="acc-btn"><h1>▼</h1></button></h3>
+                            <!--Extensive National Projects section -->
+                            <div class="single-section clear panel" align="center">
+                                <div class="table2">
+                                    <!-- picture and description table -->
+                                    <table>
+                                        <tr>
+                                            <td><img src="images/extensive/slice1.png" alt=""></td>
+                                            <td><p>
+                                                Prime Minister's Office<br><br>
+                                                Project: Heritage program<br><br>
+                                                Budget: 3B NIS<br><br>
+                                                A program for the renewal and
+                                                development of tangible and intangible
+                                                national heritage assets.<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/extensive/slice2.png" alt=""></td>
+                                            <td><p>
+                                                Ministry of construction and housing<br><br>
+                                                Project: Attainable Apartment P rice<br><br>
+                                                Budget: 3B NIS<br><br>
+                                                construction of 10,000 housing units in
+                                                Israel as part of “attainable apartment
+                                                price” in marketing route by tender for
+                                                construction/developers, when the
+                                                competition is for final price per square
+                                                meter of residential space.<br><br>
+                                                I.T.B Role: Project Manager<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/extensive/slice3.png" alt=""></td>
+                                            <td><p>
+                                                Ministry of Agriculture<br><br>
+                                                Project: Heritage program<br><br>
+                                                Budget: 3B NIS<br><br>
+                                                Infrastructure rehabilitation in rural
+                                                settlements<br><br>
+                                                I.T.B Role: Monitoring & Control<br><br>
+                                            </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/extensive/slice4.png" alt=""></td>
+                                            <td><p>
+                                                Department of Transportation<br><br>
+                                                Project: Transportation infrastructure in
+                                                the minority sector<br><br>
+                                                Budget: 1B NIS<br><br>
+                                                Infrastructure rehabilitation in rural
+                                                settlements<br><br>
+                                                I.T.B Role: Supervising<br><br>
+                                            </p></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="clear" align="center">
+        <div id="contact">
+            <h1 style="margin-bottom: 0;">contact us</h1>
+            <p>Head Office: <br> I.T.B Bld Industrial Area Lev Hasharon 40350</p>
+            <p>E-mail: <br> itb@itb.co.il</p>
+            <p>P.O Box: <br> 68 Kfar Yona</p>
+            <p>Tel: <br> 972-9-8987007</p>
+            <p>Fax: <br> 972-9-8947448</p>
+        </div>
+    </div>
+        
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        var menu = document.getElementById("menu");
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].children[0].children[0].addEventListener("click", function() {
+            var accordion = this.parentElement.parentElement;
+            var active = document.getElementsByClassName("active");
+            if (active.length == 0 || (accordion.classList.contains("active") && active.length == 1)) {
+                this.classList.toggle("acc-btn-active");
+                console.log(accordion);
+                accordion.classList.toggle("active");
+                var panel = accordion.children[1];
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            } else {
+                for (var i = 0; i < active.length; i++) {
+                    var panel = active[i].children[1];
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                    active[i].children[0].children[0].classList.toggle("acc-btn-active");
+                    active[i].classList.toggle("active");
+                }
+                setTimeout(() => {
+                    accordion.children[0].scrollIntoView({
+                        behavior: 'auto',
+                        block: 'center',
+                        inline: 'center'
+                    });
+                    this.classList.toggle("acc-btn-active");
+                    accordion.classList.toggle("active");
+                    var panel = accordion.children[1];
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    } 
+                }, 400);
+                
+            }
+            
+          });
+        }
+    </script>
+</body>
+</html>
